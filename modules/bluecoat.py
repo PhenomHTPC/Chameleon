@@ -97,7 +97,7 @@ class Bluecoat:
 
     def serve_content(self):
         print("[-] Serving content over HTTP server")
-        self.server = ThreadedHTTPServer("0.0.0.0", 8000)
+        self.server = ThreadedHTTPServer("0.0.0.0", 80)
         try:
             self.server.start()
         except:
@@ -121,6 +121,7 @@ if __name__ == "__main__":
     b = Bluecoat(url, clonesite)
     b.clone()
     b.serve_content()
-    time.sleep(10)
-    b.check_category()
-    b.shutdown_server()
+    while(True):
+        time.sleep(1)
+    #b.check_category()
+    #b.shutdown_server()
