@@ -110,9 +110,9 @@ class Bluecoat:
     def run(self):
         self.clone()
         self.serve_content()
-        time.sleep(10)
-        self.check_category()
-        self.shutdown_server()
+        #time.sleep(10)
+        #self.check_category()
+        #self.shutdown_server()
 
 
 if __name__ == "__main__":
